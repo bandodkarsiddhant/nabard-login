@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.min.css" />
+
+    <style>
+      @font-face {
+        font-family: "Roboto";
+        src: url("./assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype"),
+          url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .login {
+        min-height: 100vh;
+        position: relative;
+      }
+
+      .bg-image {
+
+position: relative;
+
+        /* background-image: url("./assets/images/login.jpg");
+        background-size: cover;
+        background-position:  top center;
+        background-repeat: no-repeat; */
+        background: linear-gradient(180deg, #fff 0%, #f3f4e3 100%);
+      }
+
+      .login-heading {
+        font-weight: 300;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+      }
+
+      .btn-login {
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+        padding: 0.75rem 1rem;
+        background-color: #16685c;
+        transition: background-color 0.2s ease, opacity 0.2s ease;
+        border: none;
+        box-shadow: 0px 11px 31.5px 0px rgba(12, 96, 50, 0.38);
+      }
+
+      .btn-login:hover {
+        background-color: #16685c;
+        opacity: 0.9;
+        border: none;
+      }
+
+      /* Sid css */
+      .img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .img-wrapper img {
+        width: 18vw;
+      }
+
+      .input-wrapper span {
+        position: absolute;
+        margin-left: 10px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+      }
+
+      input.form-control {
+        height: 40px !important;
+      }
+
+      .form-group img {
+        position: absolute;
+        margin-left: 10px;
+        z-index: 9999;
+      }
+
+      input.form-control {
+        position: relative;
+        padding-left: 45px !important;
+      }
+
+      .form-group span {
+        position: absolute;
+        height: 40px;
+        display: flex;
+        align-items: center;
+      }
+
+      #right-chevron-icon {
+        display: flex;
+        float: right;
+        height: 18px;
+      }
+
+      .link-wrapper {
+        position: absolute;
+        bottom: 30px;
+      }
+
+      .link-wrapper a,
+      span {
+        color: #7e84a3;
+      }
+
+      .footer-logo {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        border-left: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid ps-md-0">
+      <div class="row g-0">
+        <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image">
+          <img src="./assets/images/nabard-logo.png" style="width: 3rem;height: 4rem; position: absolute; top: 1rem;left: .5rem; " />
+          <img src="./assets/images/login-asset1.svg" style="position: absolute; top:0;right:0; "/>
+          <img src="./assets/images/login-asset3.png" style="position: absolute;bottom: 0;left:0;height:55vh;" />
+          <img src="./assets/images/login-asset4.png" style="position: absolute;right:0;bottom: 30vh;width: 26vw;" />
+          <img src="./assets/images/login-asset5.png" style="position: absolute;right:24vw;bottom: 25vh;width: 20vw;" />
+          <img src="./assets/images/login-asset6.png" style="position: absolute;top:5.5rem;left: .5rem;width: 20vw;" />
+        </div>
+        <div class="col-md-8 col-lg-6">
+          <div class="login d-flex align-items-center py-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-9 col-lg-7 mx-auto">
+                  <div class="img-wrapper">
+                    <img src="./assets/images/engage_logo.png" />
+                  </div>
+                  <p class="text-center my-3 fw-bold login-heading">
+                    Log in to your account
+                  </p>
+
+                  <!-- Sign In Form -->
+                  <form class="mt-4">
+                    <div>
+                      <label class="mb-2 fw-bold">Email</label>
+                      <div class="form-group">
+                        <span>
+                          <img src="./assets/icons/email.svg" />
+                        </span>
+                        <input
+                          id="email"
+                          type="email"
+                          class="form-control custom-input"
+                          name="email"
+                          value=""
+                          placeholder="Enter Your Email Address"
+                          autofocus
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mt-3">
+                      <label class="mb-2 fw-bold">Password</label>
+                      <div class="form-group">
+                        <span>
+                          <img src="./assets/icons/lock.svg" />
+                        </span>
+                        <input
+                          id="email"
+                          type="password"
+                          class="form-control custom-input"
+                          name="email"
+                          value=""
+                          placeholder="Enter Password"
+                          autofocus
+                        />
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-3">
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="rememberPasswordCheck"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="rememberPasswordCheck"
+                        >
+                          Remember me
+                        </label>
+                      </div>
+                      <div class="text-center">
+                        <a class="small text-decoration-none" href="#"
+                          >Forgot password?</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="d-grid mt-3">
+                      <button
+                        class="btn btn-lg btn-primary btn-login fw-bold mb-2"
+                        type="submit"
+                      >
+                        Continue
+                        <img
+                          src="./assets/icons/right-chevron.svg"
+                          id="right-chevron-icon"
+                        />
+                      </button>
+                    </div>
+
+                    <div class="link-wrapper">
+                      <a class="small" href="#">Privacy Policy</a>
+                      <span>|</span>
+                      <a class="small" href="#">Terms and Conditions</a>
+                      <span>|</span>
+                      <a class="small" href="#">Data Security</a> <span>|</span>
+                      <a class="small" href="#">FAQ's</a>
+                    </div>
+
+                    <div class="footer-logo">
+                      <img src="./assets/images/footer-logo.svg" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
